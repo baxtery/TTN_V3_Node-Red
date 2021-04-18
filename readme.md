@@ -5,8 +5,8 @@ Thethingsnetwork V3 upgrade is in Full swing. So if you migrated some devices an
  <br>
  You noticed here that the old V2 Node-Red COntrib is deprecated and doesn't work for V3.
  Prerequisits:<p>
-1-you have moved your device from V2 to V3 - basically recreadted the device in V3<br>
-2-you have copied/made a decrypt function in V3<br>
+1-you have moved your device from V2 to V3 - basically recreate the device in V3<br>
+2-you have copied/made a decrypt function in V3 in the console<br>
 3-you have created the MQTT integration in the device console and create an API key <br>
  for more information on this part you can use the TTN howto https://www.thethingsindustries.com/docs/integrations/node-red/
  </p>
