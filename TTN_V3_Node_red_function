@@ -1,0 +1,40 @@
+var array = [];
+
+
+var d = new Date();
+    dformat = [d.getFullYear(),
+    d.getMonth(),
+    d.getDate()].join('.')+' '+
+    [d.getHours(),
+    d.getMinutes(),
+    d.getSeconds()].join(':');
+//limit to first gateway, keep it simple
+ i = 0;
+ array = [{
+ DateTime: dformat,  
+ //counter: msg.counter,
+ rssi: msg.payload.uplink_message.rx_metadata[i].rssi,
+ snr: msg.payload.uplink_message.rx_metadata[i].snr,
+ frequency: msg.payload.uplink_message.settings.frequency,
+ //modulation: msg.metadata.modulation,
+ data_rate: msg.payload.uplink_message.settings.data_rate.lora.spreading_factor,
+ //airtime: msg.payload.uplink_message.rx_metadata[i].consumed_airtime,
+ dev_id: msg.payload.end_device_ids.device_id,
+ app_id: msg.payload.end_device_ids.application_ids.application_id,
+ //hardware_serial: msg.hardware_serial,
+ gtw_id: msg.payload.uplink_message.rx_metadata[i].gateway_ids.gateway_id,
+ Temperature: msg.payload.uplink_message.decoded_payload.Temperature,
+ Humidity: msg.payload.uplink_message.decoded_payload.Humidity,
+ Pressure: msg.payload.uplink_message.decoded_payload.Pressure,
+ GAS: msg.payload.uplink_message.decoded_payload.GAS,
+// weight: msg.payload.weight,
+// battery: msg.payload.batt,
+// pressure: msg.payload.press,
+// weighta: (msg.payload.weight)+((reft-((msg.payload.temp)-100))*calib)
+ }
+];
+
+var msg1 = {};
+msg1.payload = array;
+
+return [msg1];
