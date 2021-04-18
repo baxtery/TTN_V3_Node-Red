@@ -1,4 +1,4 @@
-Thethingsnetwork V3 upgrade is in Full swing. So if you migrated some devices and you use Node-Red, you noticed that the Contrib doesn't work anymore and that the payload format is much different than V2.<br>This is an example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red<b>
+Thethingsnetwork V3 upgrade is in Full swing. So if you migrated some devices and you use Node-Red, you noticed that the Contrib doesn't work anymore and that the payload format is much different than V2.<br>This is an example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red<br>
  I am using here the RAK WIsnode with a a BME680 as described in https://github.com/baxtery/LoRawan_Wisblock_BME680 (inlcusing decoder)
 <br><br>
  <img src="images/Node-Red_v2_v3_ttn.png" alt="Upgrade TTN nodes from V2 to V3 on Node-Red"> 
