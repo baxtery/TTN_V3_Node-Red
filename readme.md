@@ -12,10 +12,12 @@ This is a example for upgrading the Node-Red TTN devices (The Things Nework) fro
  </p>
  <p>
  You will need to<br>1-use and configure the MQTT node in the Node_red contrib<br>
-  <img src="images/create_mqtt_broker_ttn_v3_up.png" alt="Configure the TTN MQTT Broker" width="300"><br>
-  <img src="images/create_mqtt_broker_api_keys.png" alt="Configure the API Keys for you Device" width="300"><br>
+  <img src="images/create_mqtt_broker_ttn_v3_up.png" alt="Configure the TTN MQTT Broker" width="500"><br>
+  use v3/{application id}@{tenant id}/devices/{device id}/up as described in https://www.thethingsindustries.com/docs/integrations/mqtt/<br>
+  <img src="images/create_mqtt_broker_api_keys.png" alt="Configure the API Keys for you Device" width="500"><br>
+  generate the keys in your device console. #todo see how to generate keys for app and not device<br>
   2-then use a JSON formatter node available in the Node-red Contrib<br>
-   <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="50%"><br>
+   <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="500"><br>
  3- then update the function to prepare the data you want to inject in Influx DB (the path has changed)<br>
   as shown in TTN_V3_Node_red_function<br>
  please refer to the code for V2 and V3</p>
