@@ -1,4 +1,4 @@
-This is a example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red<b>
+Thethingsnetwork V3 upgrade is in Full swing. So if you migrated some devices and you use Node-Red, you noticed that the Contrib doesn't work anymore and that the payload format is much different than V2.<br>This is an example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red<b>
  I am using here the RAK WIsnode with a a BME680 as described in https://github.com/baxtery/LoRawan_Wisblock_BME680 (inlcusing decoder)
 <br><br>
  <img src="images/Node-Red_v2_v3_ttn.png" alt="Upgrade TTN nodes from V2 to V3 on Node-Red"> 
@@ -21,4 +21,4 @@ This is a example for upgrading the Node-Red TTN devices (The Things Nework) fro
  3- then update the function to prepare the data you want to inject in Influx DB (the path has changed)<br>
   as shown in TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
  please refer to the code for V2 and V3</p>
- #todo: here we are connecting single devices, in v2 we connected APPs
+ #todo: here we are connecting single devices, in v2 we connected APPs<br>Note that I am connecting to a V2 Gateways, this is why the the Gateway ID is shown Broker 
