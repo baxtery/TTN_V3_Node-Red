@@ -3,15 +3,15 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
 <br><br>
  <img src="images/Node-Red_v2_v3_ttn.png" alt="Upgrade TTN nodes from V2 to V3 on Node-Red"> 
  <br>
- You noticed here that the old V2 Node-Red COntrib is deprecated and doesn't work for V3.
+ You noticed here that the old V2 Node-Red Contrib is deprecated and doesn't work for V3, but actually u can still run them in paralell to write to the same DB while you move the devices in the TTN console.<br>
  Prerequisits:<p>
 1-you have moved your device from V2 to V3 - basically recreate the device in V3<br>
 2-you have copied/made a decrypt function in V3 in the console<br>
-3-you have created the MQTT integration in the device console and create an API key <br>
+3-you have created the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)<br>
  for more information on this part you can use the TTN howto https://www.thethingsindustries.com/docs/integrations/node-red/
  </p>
  <p>
- You will need to<br>1-use and configure the MQTT node in the Node_red contrib<br>Configure Node-Red as MQTT client for TTN <br>Server : <i>eu1.cloud.thethings.network</i> Port <i>1883</i> and subscribe to your device uplink (topic)<br>
+ You will need to<br>1-use and configure the MQTT node in the Node_red contrib (no need to inslall anything)<br>Configure Node-Red as MQTT client for TTN <br>Server : <i>eu1.cloud.thethings.network</i> Port <i>1883</i> and subscribe to your device uplink (topic)<br>
    <img src="images/create_mqtt_broker_api_keys.png" alt="Configure the API Keys for you Device" width="500"><br>
   use <i>v3/{application id}@{tenant id}/devices/{device id}/up</i> as described in https://www.thethingsindustries.com/docs/integrations/mqtt/<br>
 
