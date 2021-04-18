@@ -19,6 +19,7 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
   generate the keys in your device console. #todo see how to generate keys for app and not device<br>
   2-then use a JSON formatter node available in the Node-red Contrib<br>
    <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="500"><br>
+   Now go to security tab and add the API keys
  3- then update the function to prepare the data you want to inject in Influx DB (the path has changed)<br>
   as shown in TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
  please refer to the code for V2 and V3</p>
