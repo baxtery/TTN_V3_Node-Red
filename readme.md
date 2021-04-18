@@ -21,4 +21,4 @@ Thethingsnetwork V3 upgrade is in Full swing. So if you migrated some devices an
  3- then update the function to prepare the data you want to inject in Influx DB (the path has changed)<br>
   as shown in TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
  please refer to the code for V2 and V3</p>
- #todo: here we are connecting single devices, in v2 we connected APPs<br>Note that I am connecting to a V2 Gateways, this is why the the Gateway ID is shown Broker 
+ #todo: here we are connecting single devices, in v2 we connected APPs<br>Note that I am connecting to a V2 Gateway, hence "Gateway ID" is shown as "Broker". 
