@@ -13,10 +13,12 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
  <p>
  You will need to<br>1-use and configure the MQTT node in the Node_red contrib (no need to inslall anything)<br>Configure Node-Red as MQTT client for TTN <br>Server : <i>eu1.cloud.thethings.network</i> Port <i>1883</i> and subscribe to your device uplink (topic)<br>
    <img src="images/create_mqtt_broker_api_keys.png" alt="Configure the API Keys for you Device" width="500"><br>
+ Go to Security tab and add you API keys<br>
+ Now go back to the main screen of the MQTT node<br>
   use <i>v3/{application id}@{tenant id}/devices/{device id}/up</i> as described in https://www.thethingsindustries.com/docs/integrations/mqtt/<br>
-
+ #todo see how to generate keys and subscribe for app instead of device<br>
   <img src="images/create_mqtt_broker_ttn_v3_up.png" alt="Configure the TTN MQTT Broker" width="500"><br>
-  generate the keys in your device console. #todo see how to generate keys for app and not device<br>
+  #todo see how to generate keys for app and not device<br>
   2-then use a JSON formatter node available in the Node-red Contrib<br>
    <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="500"><br>
    Now go to security tab and add the API keys
