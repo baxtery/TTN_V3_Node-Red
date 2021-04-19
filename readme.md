@@ -3,7 +3,7 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
 <br><br>
  <img src="images/Node-Red_v2_v3_ttn.png" alt="Upgrade TTN nodes from V2 to V3 on Node-Red"> 
  <br>
- You noticed here that the old V2 Node-Red Contrib is deprecated and doesn't work for V3, but actually u can still run them in paralell to write to the same DB while you move the devices in the TTN console.<br>
+ So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but actually u can still run it in paralell to write to the same DB while you move the devices in the TTN console.<br>
  Prerequisits:<p>
 1-you have moved your device from V2 to V3 - basically recreate the device in V3<br>
 2-you have copied/made a decrypt function in V3 in the console<br>
@@ -20,7 +20,6 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
   <img src="images/create_mqtt_broker_ttn_v3_up.png" alt="Configure the TTN MQTT Broker" width="500"><br>
   2-then use a JSON formatter node available in the Node-red Contrib<br>
    <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="500"><br>
-   Now go to security tab and add the API keys
  3- then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly, most variables are now in <i>msg.payload.uplink_message.decoded_payload.XXX</i><br>
  You can refer to TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
  please compare the code for V2 and V3 and make sure you have all your vairables as in V2</p>
