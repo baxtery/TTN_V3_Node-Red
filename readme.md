@@ -1,5 +1,5 @@
 Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices and you use Node-Red, you noticed that the ttn-contrib doesn't work anymore and that the payload format is much different than V2.<br>This is an example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red<br>
- <img src="thethingsnetwork_v3_console.png" alt="Upgrade TTN devices from V2 to V3"> 
+ <img src="images/thethingsnetwork_v3_console.png" alt="Upgrade TTN devices from V2 to V3"> 
  I am using here the RAK Wisnode with a a BME680 as described in https://github.com/baxtery/LoRawan_Wisblock_BME680 (inlcuding decoder)
 <br><br>
  <img src="images/Node-Red_v2_v3_ttn.png" alt="Upgrade TTN nodes from V2 to V3 on Node-Red"> 
@@ -21,16 +21,17 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
   <img src="images/create_mqtt_broker_ttn_v3_up.png" alt="Configure the TTN MQTT Broker" width="500"><br>
   2-then use a JSON formatter node available in the Node-red Contrib<br>
    <img src="images/Json_node.png" alt="Parse MQTT into JSON" width="500"><br>
- 3- then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly, most variables are now in <i>msg.payload.uplink_message.decoded_payload.XXX</i><br>
- Device info are in <br>
+ 3- then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly.<br>
+ <p>Most variables are now in <i>msg.payload.uplink_message.decoded_payload.XXX</i><br></p>
+ <p>Device info are in <br>
  <i>dev_id: msg.payload.end_device_ids.device_id,
  app_id: msg.payload.end_device_ids.application_ids.application_id,
- </i><br>
- Network info<br>
+ </i><br></p>
+<p>Network info<br>
 <i>rssi: msg.payload.uplink_message.rx_metadata[i].rssi,
  snr: msg.payload.uplink_message.rx_metadata[i].snr,
  frequency: msg.payload.uplink_message.settings.frequency,
- </i>
+ </i><br></p>
  You can refer to TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
  please compare the code for V2 and V3 and make sure you have all your vairables as in V2</p>
  #todo: here we are connecting single devices, in v2 we connected APPs, check if this can be done<br>Note that I am connecting to a V2 Gateway, hence "Gateway ID" will appear as "Broker". 
