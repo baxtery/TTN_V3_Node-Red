@@ -24,12 +24,12 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
  3- then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly.<br>
  <p>Most variables are now in <i>msg.payload.uplink_message.decoded_payload.XXX</i><br></p>
  <p>Device info are in <br>
- <i>dev_id: msg.payload.end_device_ids.device_id,
+ <i>dev_id: msg.payload.end_device_ids.device_id,<br>
  app_id: msg.payload.end_device_ids.application_ids.application_id,
  </i><br></p>
 <p>Network info<br>
-<i>rssi: msg.payload.uplink_message.rx_metadata[i].rssi,
- snr: msg.payload.uplink_message.rx_metadata[i].snr,
+<i>rssi: msg.payload.uplink_message.rx_metadata[i].rssi,<br>
+ snr: msg.payload.uplink_message.rx_metadata[i].snr,<br>
  frequency: msg.payload.uplink_message.settings.frequency,
  </i><br></p>
  You can refer to TTN_V3_Node_red_function https://github.com/baxtery/TTN_V3_Node-Red/blob/main/TTN_V3_Node_red_function<br>
