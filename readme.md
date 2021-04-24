@@ -12,7 +12,7 @@ So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but ac
 ## Prerequisits
 1. you have moved your device from V2 to V3 - basically recreate the device in V3 console https://console.cloud.thethings.network/
 2. you have copied/made a decrypt function in V3 in the console
-3. you have created the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)
+3. you activated the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)
  for more information on this part you can use the TTN howto https://www.thethingsindustries.com/docs/integrations/node-red/
 
 ## You will need to
