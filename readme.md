@@ -18,13 +18,17 @@ So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but ac
 ## You will need to
 
 1. use the MQTT node in the Node_red contrib (no need to inslall anything)
-Configure the node as MQTT client for TTN<br>Server : *eu1.cloud.thethings.network* Port *1883* and subscribe to your device uplink (topic)
+Configure the node as MQTT client for TTN
+#### Server and Port
+	Server : eu1.cloud.thethings.network Port 1883 
+and subscribe to your device uplink (topic)
 
 ![](images/create_mqtt_broker_api_keys.png)
 
 Go to Security tab and add you API keys
 Now go back to the main screen of the MQTT node
-as described in https://www.thethingsindustries.com/docs/integrations/mqtt/, use
+as described in https://www.thethingsindustries.com/docs/integrations/mqtt/, 
+#### use
 	v3/{application id}@{tenant id}/devices/{device id}/up
 
 ![](images/create_mqtt_broker_ttn_v3_up.png)
