@@ -10,14 +10,14 @@ I am using here the RAK Wisnode with a a BME680 as described in https://github.c
 So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but actually u can still run it in paralell to write to the same DB while you move the devices in the TTN console.
 
 ## Prerequisits
-1-you have moved your device from V2 to V3 - basically recreate the device in V3 console https://console.cloud.thethings.network/
-2-you have copied/made a decrypt function in V3 in the console
-3-you have created the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)
+1. you have moved your device from V2 to V3 - basically recreate the device in V3 console https://console.cloud.thethings.network/
+2. you have copied/made a decrypt function in V3 in the console
+3. you have created the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)
  for more information on this part you can use the TTN howto https://www.thethingsindustries.com/docs/integrations/node-red/
 
 ## You will need to
 
-1-use the MQTT node in the Node_red contrib (no need to inslall anything)
+1. use the MQTT node in the Node_red contrib (no need to inslall anything)
 Configure the node as MQTT client for TTN<br>Server : *eu1.cloud.thethings.network* Port *1883* and subscribe to your device uplink (topic)
 
 ![](images/create_mqtt_broker_api_keys.png)
@@ -29,11 +29,11 @@ as described in https://www.thethingsindustries.com/docs/integrations/mqtt/, use
 
 ![](images/create_mqtt_broker_ttn_v3_up.png)
 
-2-then use a JSON formatter node available in the Node-red Contrib
+2. then use a JSON formatter node available in the Node-red Contrib
 
 ![](images/Json_node.png)
 
-3- then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly.
+3. then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly.
 
 ## Retrieve Variables
 #### Most variables are now in
