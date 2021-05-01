@@ -5,7 +5,7 @@ Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices an
 
 I am using here the RAK Wisnode with a a BME680 as described in https://github.com/baxtery/LoRawan_Wisblock_BME680 (inlcuding decoder)
 
-![](images/Node-Red_v2_v3_ttn.png)
+![](images/node_red_diagram_v2_v3.png)
 
 So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but actually u can still run it in paralell to write to the same DB while you move the devices in the TTN console.
 
@@ -15,7 +15,7 @@ So the old V2 Node-Red-ttn Contrib is deprecated and doesn't work for V3, but ac
 3. you activated the MQTT integration in the device console and created an API key (to use in Node-Red MQTT node)
  for more information on this part you can use the TTN howto https://www.thethingsindustries.com/docs/integrations/node-red/
 
-## You will need to
+## You will need to (Simplified with Json fromatting directly in MQTT node)
 
 1. use the MQTT node in the Node_red contrib (no need to inslall anything)
 Configure the node as MQTT client for TTN
@@ -31,11 +31,11 @@ as described in https://www.thethingsindustries.com/docs/integrations/mqtt/,
 #### use
 	v3/{application id}@{tenant id}/devices/{device id}/up
 
-![](images/create_mqtt_broker_ttn_v3_up.png)
+![](images/node_red_mqtt_setup_json_output.png)
 
-2. then use a JSON formatter node available in the Node-red Contrib
+2. your output message will be formatted in JSON Object like this
 
-![](images/Json_node.png)
+![](images/json_object_formatted.png)
 
 3. then update the function to prepare the data you want to inject in Influx DB. The path msg.payload has changed significantly.
 
