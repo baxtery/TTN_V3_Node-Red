@@ -1,4 +1,4 @@
-# Simplified with Json fromatting directly in MQTT node
+## Simplified with Json fromatting directly in MQTT node
 
 # tl;dr
 Thethingsnetwork V3 upgrade is in full swing. So if you migrated some devices and you use Node-Red, you noticed that the ttn-contrib doesn't work anymore and that the payload format is much different than V2.<br>This is an example for upgrading the Node-Red TTN devices (The Things Nework) from V2 to V3 while using the same InfluxDB (or any other) and eventually running TTN devices on v2 and V3 in paralell on Node-Red
